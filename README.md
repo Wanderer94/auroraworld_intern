@@ -61,6 +61,18 @@ uvicorn app.main:app --reload
 - Swagger UI: [http://localhost:8000/docs](http://localhost:8000/docs)
 - ReDoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
 
+## 3.3 데이터베이스 설정
+
+이 프로젝트는 **PostgreSQL**을 사용합니다. 데이터베이스를 생성하려면 PostgreSQL을 설치한 후, `.env` 파일을 설정하고 아래 명령어를 실행하세요.
+
+### 1️⃣ `.env` 파일 설정
+
+프로젝트 루트 디렉토리에 `.env` 파일을 만들고 아래 내용을 추가하세요.
+
+```ini
+DATABASE_URL=postgresql://fastapi_user:securepassword@localhost:5432/fastapi_db
+```
+
 ---
 
 # 4. 기술 스택
