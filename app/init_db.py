@@ -1,7 +1,7 @@
 import os
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from app.models import Base  # 데이터베이스 모델 불러오기
+from app.models.models import Base  # 데이터베이스 모델 불러오기
 from dotenv import load_dotenv
 
 # 환경 변수 로드
