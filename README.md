@@ -65,12 +65,25 @@ uvicorn app.main:app --reload
 
 이 프로젝트는 **PostgreSQL**을 사용합니다. 데이터베이스를 생성하려면 PostgreSQL을 설치한 후, `.env` 파일을 설정하고 아래 명령어를 실행하세요.
 
-### 1️⃣ `.env` 파일 설정
+### 1️. `.env` 파일 설정
 
 프로젝트 루트 디렉토리에 `.env` 파일을 만들고 아래 내용을 추가하세요.
 
 ```ini
 DATABASE_URL=postgresql://fastapi_user:securepassword@localhost:5432/fastapi_db
+```
+
+### 2. 명령어 입력
+
+```sh
+# 1️⃣ PostgreSQL에서 직접 데이터베이스 생성
+psql -U postgres -c "CREATE DATABASE fastapi_db;"
+
+# 2️⃣ .env 설정 확인
+cat .env  # DATABASE_URL이 올바르게 설정되었는지 확인
+
+# 3️⃣ Alembic 마이그레이션 실행
+alembic upgrade head
 ```
 
 ---
