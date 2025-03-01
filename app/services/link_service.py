@@ -10,9 +10,9 @@ def create_link(db: Session, link: LinkCreate, user_id: int):
     db.refresh(db_link)
     return db_link
 
-def get_all_links(db: Session):
-    """모든 웹 링크를 조회하는 함수"""
-    return db.query(WebLink).all()
+def get_user_links(db: Session, user_id: int):
+    """현재 로그인한 사용자의 웹 링크만 조회하는 함수"""
+    return db.query(WebLink).filter(WebLink.created_by == user_id).all()
 
 def get_link_by_id(db: Session, link_id: int):
     """특정 웹 링크를 조회하는 함수"""
