@@ -33,8 +33,8 @@ def get_user_links(db: Session, user_id: int):
 
 def update_link(db: Session, link_id: int, link_data: LinkCreate, user_id: int):
     """웹 링크 수정 함수 (본인만 가능)"""
-    db_link = get_link_by_id(db, link_id)  # 🔹 중복 제거 (공통 조회 함수 활용)
-    check_link_owner(db_link, user_id)  # 🔹 소유권 검사 추가
+    db_link = get_link_by_id(db, link_id) 
+    check_link_owner(db_link, user_id)  
 
     try:
         for key, value in link_data.dict().items():
@@ -48,8 +48,8 @@ def update_link(db: Session, link_id: int, link_data: LinkCreate, user_id: int):
 
 def delete_link(db: Session, link_id: int, user_id: int):
     """웹 링크 삭제 함수 (본인만 가능)"""
-    db_link = get_link_by_id(db, link_id)  # 🔹 중복 제거 (공통 조회 함수 활용)
-    check_link_owner(db_link, user_id)  # 🔹 소유권 검사 추가
+    db_link = get_link_by_id(db, link_id) 
+    check_link_owner(db_link, user_id)  
 
     try:
         db.delete(db_link)
