@@ -1,5 +1,6 @@
-from pydantic import BaseModel, HttpUrl
 from datetime import datetime
+
+from pydantic import BaseModel, HttpUrl
 
 
 # 웹 링크 생성 요청 데이터 모델

@@ -215,3 +215,4 @@ alembic/versions/
 instance/
 *.db
 *.sqlite
+_추후작업.md

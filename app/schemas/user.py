@@ -1,5 +1,6 @@
-from pydantic import BaseModel, EmailStr
 from datetime import datetime
+
+from pydantic import BaseModel, EmailStr
 
 
 # 회원가입 요청 데이터 모델

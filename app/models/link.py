@@ -1,6 +1,8 @@
-from sqlalchemy import Column, Integer, String, ForeignKey, Text, TIMESTAMP
-from sqlalchemy.orm import relationship
 from datetime import datetime
+
+from sqlalchemy import TIMESTAMP, Column, ForeignKey, Integer, String, Text
+from sqlalchemy.orm import relationship
+
 from app.models.base import Base
 
 

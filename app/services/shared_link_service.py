@@ -1,4 +1,5 @@
 from sqlalchemy.orm import Session
+
 from app.models.shared_link import SharedLink
 from app.schemas.shared_link import SharedLinkCreate
 

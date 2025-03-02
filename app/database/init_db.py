@@ -1,14 +1,15 @@
-import sys
 import os
+import sys
 
 # 프로젝트 루트를 sys.path에 추가하여 모듈 인식 문제 해결
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
 
+import subprocess
+
+from core.config import settings
+from models.base import Base
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from models.base import Base
-from core.config import settings
-import subprocess
 
 
 def initialize_database():

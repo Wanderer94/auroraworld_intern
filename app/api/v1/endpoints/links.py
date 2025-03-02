@@ -1,16 +1,13 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from app.database.session import get_db
-from app.schemas.link import LinkCreate, LinkResponse
-from app.models.link import WebLink
-from app.services.link_service import (
-    create_link,
-    get_user_links,
-    get_link_by_id,
-    update_link,
-    delete_link,
-)
+
 from app.core.security import get_current_user
+from app.database.session import get_db
+from app.models.link import WebLink
+from app.schemas.link import LinkCreate, LinkResponse
+from app.services.link_service import (create_link, delete_link,
+                                       get_link_by_id, get_user_links,
+                                       update_link)
 
 router = APIRouter()
 
