@@ -3,6 +3,7 @@ from sqlalchemy.orm import relationship
 from datetime import datetime
 from app.models.base import Base
 
+
 class SharedLink(Base):
     __tablename__ = "shared_links"
 

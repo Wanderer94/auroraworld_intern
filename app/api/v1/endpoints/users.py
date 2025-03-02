@@ -6,6 +6,7 @@ from app.services.user_service import create_user
 
 router = APIRouter()
 
+
 @router.post("/", response_model=UserResponse)
 def register_user(user: UserCreate, db: Session = Depends(get_db)):
     """회원가입 API"""

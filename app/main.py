@@ -6,6 +6,7 @@ app = FastAPI(title="FastAPI Web Link Manager")
 # API 라우트 추가
 app.include_router(api_router)
 
+
 @app.get("/")
 def root():
     return {"message": "Welcome to the FastAPI Web Link Manager!"}
